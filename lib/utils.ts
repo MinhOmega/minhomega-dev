@@ -23,19 +23,27 @@ export const navItems = [
 export const contacts = [
   {
     name: "Mail",
-    link: "mailto:chrysayita@gmail.com",
+    link: "mailto:vnqminh0502@gmail.com",
   },
   {
-    name: "Fiverr",
-    link: "https://www.fiverr.com/users/chrysyt",
+    name: "Upwork",
+    link: "https://www.upwork.com/freelancers/~01b947c9dc2f4ed9f8",
   },
   {
     name: "Instagram",
-    link: "https://instagram.com/_creative_ambition",
+    link: "https://www.instagram.com/quangminnnn/",
   },
   {
     name: "Facebook",
-    link: "https://web.facebook.com/share/g/NY81ZaaMtJ6qrrPm/",
+    link: "https://web.facebook.com/minhomegaa",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/minhvoomega/",
+  },
+  {
+    name: "Github",
+    link: "https://github.com/MinhOmega",
   },
 ];
 

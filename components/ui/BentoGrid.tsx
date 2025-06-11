@@ -178,7 +178,7 @@ const BentoGrid = memo(function BentoGrid() {
         </div>
 
         <span className="hidden md:flex relative text-sm md:text-base">
-          @infinity Studios
+          @MinhOmega
         </span>
       </div>
 
@@ -199,19 +199,19 @@ const BentoGrid = memo(function BentoGrid() {
         <CardCorners />
         <span className="text-center mx-auto self-center">
           Freelance Software Developer{" "}
-          <em className="text-[#61cc9c]">@fiverr</em>
+          <em className="text-[#61cc9c]">@upwork</em>
         </span>
         <div
           className="h-[70px] my-auto"
           style={{
-            backgroundImage: "url('/assets/contact/fiverr.png')",
+            backgroundImage: "url('/assets/contact/upwork.png')",
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
         <FancyButtonAlt
-          link="https://www.fiverr.com/users/chrysyt"
+          link="https://www.upwork.com/freelancers/~01b947c9dc2f4ed9f8"
           icon={<RiChatSmile3Line />}
           title="Get in touch"
         />

@@ -2,8 +2,25 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+interface Fact {
+  id: string;
+  text: string;
+  source: string;
+  source_url: string;
+  language: string;
+  permalink: string;
+}
+
 const UselessFacts = () => {
-  const [fact, setFact] = useState({});
+  const [fact, setFact] = useState<Fact>({
+    id: "",
+    text: "",
+    source: "",
+    source_url: "",
+    language: "",
+    permalink: "",
+  });
+
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -17,13 +34,13 @@ const UselessFacts = () => {
       .catch((error) => {
         setError(true);
       })
-      .finally(setLoading(false));
+      .finally(() => setLoading(false));
   }, []);
 
   return (
     <p className={``}>
       {loading && <i className="text-gray-400">Loading...</i>}
-      {fact.text && fact.text}
+      {fact?.text && fact?.text}
       {error && (
         <i className="text-gray-400">
           Oops! something went wrong

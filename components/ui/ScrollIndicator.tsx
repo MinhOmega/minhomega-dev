@@ -3,27 +3,33 @@
 import { sacramento } from "@/lib/fonts";
 import { useEffect, useState } from "react";
 
-function ScrollIndicator() {
+const ScrollIndicator = () => {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
-    const scrollIndicator = document.querySelector(".scroll-indicator");
+    const scrollIndicator = document.querySelector(".scroll-indicator") as HTMLElement;
 
-    function update() {
-      var scrollTop = window.scrollY;
-      var scrollHeight =
+    const handleUpdate = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      var scrollPercentage = (scrollTop / scrollHeight) * 100;
-      scrollIndicator.style.height = `${scrollPercentage}%`;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+      
+      if (scrollIndicator) {
+        scrollIndicator.style.height = `${scrollPercentage}%`;
+      }
+      
       setPercentage(Math.ceil(scrollPercentage));
-    }
+    };
 
-    update();
+    handleUpdate();
 
-    window.addEventListener("scroll", () => {
-      update();
-    });
+    window.addEventListener("scroll", handleUpdate);
+
+    return () => {
+      window.removeEventListener("scroll", handleUpdate);
+    };
   }, []);
 
   return (
@@ -42,6 +48,6 @@ function ScrollIndicator() {
       </span>
     </div>
   );
-}
+};
 
 export default ScrollIndicator;
