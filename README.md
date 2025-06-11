@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-[ca-io.vercel.app](https://ca-io.vercel.app)
+[minhomega-dev.vercel.app](https://minhomega-dev.vercel.app)
 
 ---
 
@@ -30,7 +30,7 @@ These instructions will help you set up and run the portfolio locally.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/minhomega/ca-io.git my-portfolio
+git clone https://github.com/minhomega/minhomega-dev.git my-portfolio
 cd my-portfolio
 ```
 
